@@ -1,0 +1,136 @@
+:root {
+    --bg: #f5f7fb;
+    --text: #1a1a1a;
+    --card: #ffffff;
+    --shadow: rgba(0,0,0,0.08);
+    --primary: #4a6cf7;
+    --primaryGlow: rgba(74,108,247,0.2);
+}
+
+.dark {
+    --bg: #0f1115;
+    --text: #ffffff;
+    --card: #16181d;
+    --shadow: rgba(255,255,255,0.05);
+    --primaryGlow: rgba(74,108,247,0.4);
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    transition: 0.4s ease;
+}
+
+.app {
+    max-width: 480px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    display:flex; justify-content:space-between; align-items:center;
+    margin-bottom:20px;
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+#darkToggle {
+    background: var(--card);
+    border: none;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px var(--shadow);
+    transition: 0.3s;
+}
+
+.progress {
+    width:100%;
+    height:10px;
+    background:#d0d4e2;
+    border-radius:50px;
+    overflow:hidden;
+    margin-bottom:25px;
+}
+
+#progressFill {
+    height:100%;
+    width:0%;
+    background:var(--primary);
+    border-radius:50px;
+    transition:0.4s ease;
+    box-shadow:0 0 10px var(--primaryGlow);
+}
+
+.card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 22px;
+    box-shadow: 0 10px 35px var(--shadow);
+    transition: 0.4s ease;
+}
+
+.card h2 {
+    color: var(--text);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.option {
+    padding: 14px 16px;
+    background: var(--bg);
+    border-radius: 14px;
+    margin-bottom: 12px;
+    cursor:pointer;
+    transition: 0.25s;
+    color:var(--text);
+    position:relative;
+    overflow:hidden;
+}
+
+.option:hover {
+    transform: translateY(-2px);
+    box-shadow:0 4px 15px var(--shadow);
+}
+
+.option.correct { background: #d7ffd9; }
+.option.wrong { background: #ffd7d7; }
+
+.result {
+    text-align:center;
+    margin-top:30px;
+}
+
+.retry {
+    background: var(--primary);
+    color:#fff;
+    padding:14px 26px;
+    border:none;
+    border-radius:14px;
+    margin-top:20px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 6px 20px var(--primaryGlow);
+    transition:0.3s;
+}
+
+.retry:hover {
+    transform: scale(1.05);
+}
+
+.hidden { display:none; }
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform:translateY(10px);}
+    to   {opacity:1; transform:translateY(0);}
+}

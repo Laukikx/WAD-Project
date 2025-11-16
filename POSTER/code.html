@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cricket Quiz</title>
+<link rel="stylesheet" href="./code.css">
+</head>
+<body>
+
+<div class="app">
+
+    <header>
+        <h1>Cricket Quiz</h1>
+        <button id="darkToggle">🏏</button>
+    </header>
+
+    <div class="progress">
+        <div id="progressFill"></div>
+    </div>
+
+    <div id="card" class="card fade-in">
+        <h2 id="questionText"></h2>
+        <div id="options"></div>
+    </div>
+
+    <div id="result" class="result hidden">
+        <h2>Your Score</h2>
+        <p id="scoreDisplay"></p>
+        <button id="retryBtn" class="retry">Retry Quiz</button>
+    </div>
+
+</div>
+
+<audio id="correctSound" src="./correct.mp3"></audio>
+<audio id="wrongSound" src="./wrong.mp3"></audio>
+<audio id="clickSound" src="./clicksound.mp3"></audio>
+
+<script src="./code.js"></script>
+</body>
+</html>
